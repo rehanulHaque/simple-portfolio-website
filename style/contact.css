@@ -1,0 +1,119 @@
+:root{
+    --primary-clr: #191919;
+    --white-clr: #fff;
+    --black-clr: #000;
+    --secondary-clr: #D17C6A;
+}
+.contact-container{
+    display: flex;
+    flex-direction: column;
+}
+.contact-heading{
+    text-align: center;
+    font-size: 2.5rem;
+    font: bold;
+    text-transform: capitalize;
+    padding: 1rem 0 0 0 ;
+}
+.contact-second-heading{
+    font-size: 1.3rem;
+    text-align: center;
+    font: 100;
+}
+.form-container{
+    background-color: var(--white-clr);
+    color: var(--primary-clr);
+    align-self: center;
+    margin-top: 1rem;
+    border-radius: 12px;
+    height: auto;
+}
+.form-heading{
+    padding: 6px 1rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+label{
+    position: relative;
+}
+.firstname{
+    display: inline-block;
+}
+.email{
+    display: block;
+}
+input{
+    padding: 8px 12px;
+    border: 2px solid var(--secondary-clr);
+    border-radius: 12px;
+    outline: 0;
+    font-size: 1.3rem;
+    margin: 1rem;
+}
+.fname-text, .lname-text, .email-text, .number-text{
+    position: absolute;
+    top: 1.7rem;
+    left: 2rem;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+.lname-text, .number-text{
+    top: -0.2rem;
+}
+input:focus + span{
+    top: -0.8rem;
+    font-weight: 500;
+}
+input:focus + .lname-text,
+input:focus + .number-text{
+    top: -2.5rem;
+    font-weight: 500;
+}
+.service-heading{
+    padding-left: 1rem;
+}
+.service-container{
+    width: 100%;
+    padding: 1rem;
+}
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+}
+.btns-btn{
+    padding: 1rem 1.2rem;
+    color: var(--white-clr);
+    color: var(--secondary-clr);
+    border: 2px solid var(--secondary-clr);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+.btns-btn:hover, .btns-btn:focus{
+    background-color: var(--secondary-clr);
+    border: 2px solid var(--white-clr);
+    color: var(--white-clr);
+}
+
+.submit{
+    padding: 1rem 1.2rem;
+    color: var(--white-clr);
+    background-color: var(--secondary-clr);
+    border-radius: 12px;
+    margin: auto;
+    display: block;
+    text-align: center;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+@media only screen and (max-width: 550px) {
+    .btns{
+        flex-wrap: wrap;
+    }
+    .btns-btn {
+        display: block;
+    }
+}
